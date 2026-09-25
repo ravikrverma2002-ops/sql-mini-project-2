@@ -21,12 +21,14 @@ The ClassicModels database must be installed or imported in MySQL before running
 - Sort customers alphabetically and demonstrate `LIMIT` with an offset.
 - Count customers by country and filter grouped counts with `HAVING`.
 - Find the customer or customers with the highest credit limit using a subquery.
+- Count customers assigned to each sales representative, and identify customers with no assigned sales rep.
 
 ### Product analysis
 
 - Inspect product details, including product line, stock, and buy price.
 - Find products with low stock and search product names.
 - Count products by product line and compare minimum and maximum buy prices within each line.
+- Sort products by price and by stock level.
 
 ### Payment analysis
 
@@ -35,11 +37,11 @@ The ClassicModels database must be installed or imported in MySQL before running
 
 ## SQL concepts used
 
-`SELECT`, `WHERE`, `AND`, `LIKE`, `IN`, `ORDER BY`, `LIMIT` with offset, `GROUP BY`, `HAVING`, aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`), `ROUND`, and a subquery.
+`SELECT`, `WHERE`, `AND`, `LIKE`, `IN`, `IS NULL`, `ORDER BY` (single and multi-column), `LIMIT` with offset, `GROUP BY`, `HAVING`, aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`), `ROUND`, and a subquery.
 
 ## Results and observations
 
-The queries produce customer counts by country, product counts and price ranges by product line, and payment summaries by customer. Review the result grids after running the script and add any specific numeric findings you want to highlight here.
+The queries produce customer counts by country, sales rep customer distribution, product counts and price ranges by product line, and payment summaries by customer. Review the result grids after running the script and add any specific numeric findings you want to highlight here.
 
 ## Project files
 
