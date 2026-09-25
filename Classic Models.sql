@@ -90,3 +90,35 @@ ORDER BY AveragePayment DESC;
 SELECT customerNumber, MAX(amount),
 MIN(amount) FROM payments
 GROUP BY customerNumber;
+
+
+-- Sales rep & Product sorting (added)
+SELECT salesRepEmployeeNumber, COUNT(*) AS customer_count
+FROM customers
+GROUP BY salesRepEmployeeNumber
+ORDER BY customer_count DESC;
+
+
+SELECT customerName, country, creditLimit
+FROM customers
+WHERE salesRepEmployeeNumber = 1165;
+
+
+SELECT customerName, country
+FROM customers
+WHERE salesRepEmployeeNumber IS NULL;
+
+
+SELECT productName, productLine, buyPrice
+FROM products
+ORDER BY buyPrice DESC;
+
+
+SELECT productName, quantityInStock
+FROM products
+ORDER BY quantityInStock ASC;
+
+
+SELECT productLine, productName, buyPrice
+FROM products
+ORDER BY productLine ASC, buyPrice ASC;
